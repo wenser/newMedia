@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="chrome">
+    <title>资源排期</title>
+    <!--layui的样式-->
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+		<div class="layui-header">
+			<div class="top-cont">
+				<div class="layui-logo"></div>
+				<!--个人头像-->
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="images/user_03.png" class="layui-nav-img"> fuben
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--左导航-->
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree" lay-filter="test">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="icon"></i>订单管理</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;">客户订单</a>
+							</dd>
+							<dd class="layui-this">
+								<a href="javascript:;">广告位订单</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">草稿箱</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">合同管理</a>
+							</dd>
+							<dd>
+								<a href="form.html">表单页</a>
+							</dd>
+						</dl>
+					</li>	
+				</ul>
+			</div>
+		</div>
+		<!--内容区域-->
+		<div class="layui-body">
+			<div class="content noTB">
+				<!--相关信息-->
+				<div class="calender_info">
+					<div class="filter_channel">
+						<span>频道：<em>中国国际广播电台</em></span>
+						<span>地区：<em>北京</em></span>
+						<span>段位：<em>t1</em></span>
+						<span>点位：<em>07:35</em></span>
+					</div>
+				</div>
+				<!--日历盒子-->
+				<div class="calender_box">
+					<!--标题-->
+					<div class="calender_title">
+						<h6>
+							<em></em>年
+							<em></em>月
+							<!--//日历图标-->
+							<span class="dateBtn">
+								<i class="layui-icon date">&#xe63c;</i>
+								<!--触发日历的输入框-->
+								<input id="dateInput" type="text" readonly="readonly"/>
+							</span>
+						</h6>
+					</div>
+					
+					<ul class="calender">
+					<!--周-->
+						<li>日</li>
+						<li>一</li>
+						<li>二</li>
+						<li>三</li>
+						<li>四</li>
+						<li>五</li>
+						<li>六</li>
+					</ul>
+					<!--天-->
+					<ul class="list_day clearfix">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 0%;"></i>
+								<span style="width: 0%;">0%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">1</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">21</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">22</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">23</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">24</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">25</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">26</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">27</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">28</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li>
+							<span class="day">29</span>
+							<div class="progress_bar">
+								<i style="width: 60%;"></i>
+								<span style="width: 60%;">60%</span>
+							</div>
+							<div class="time_chunk">
+								<table>
+									<tr>
+										<td style="width: 33%;" class="red">80s</td>
+										<td style="width: 25%;" class="yellow">60s</td>
+										<td style="width: 56%;" class="green">100s</td>
+									</tr>
+								</table>
+							</div>
+						</li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+				<!--颜色提示-->
+				<div class="colors">
+					<span>
+						<label class="red"></label>
+						已占用
+					</span>
+					<span>
+						<label class="yellow"></label>
+						已预订
+					</span>
+					<span>
+						<label class="green"></label>
+						未出售
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="layui-footer">
+			<!-- 底部固定区域 -->
+		</div>
+	</div>
+
+	<!-- //引入layui -->
+	<script src="plugins/layui/layui.js"></script>
+	<!--引入jQuery-->
+	<script src="plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--本页js-->
+	<script src="js/calender.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

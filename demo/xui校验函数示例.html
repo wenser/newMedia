@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../plugins/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<script src="../plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/xui.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="layui-body">
+		<form action="" class="layui-form">
+			<!--required 校验非空、非空格--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">required</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="required" 
+						xui-verify="required" 
+						xui-bubble="required" 
+						placeholder="必填项"/>
+				</div>
+			</div>
+				
+			<!--phone 如果有值则 校验输入值是否符合手机格式   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">phone</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="phone" 
+						xui-verify="phone" 
+						xui-bubble="phone" 
+						placeholder="可输入手机"/>
+				</div>
+			</div>
+				
+			<!--email 如果有值则 校验输入值是否符合邮箱格式   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">email</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="email" 
+						xui-verify="email" 
+						xui-bubble="email" 
+						placeholder="可输入邮箱"/>
+				</div>
+			</div>
+			
+			<!--url 如果有值则 校验输入值是否符合网址格式   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">url</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="url" 
+						xui-verify="url" 
+						xui-bubble="url" 
+						placeholder="可输入网址"/>
+				</div>
+			</div>
+			
+			<!--date 如果有值则 校验输入值是否符合日期格式   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">date</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="date" 
+						xui-verify="date" 
+						xui-bubble="date" 
+						placeholder="可输入日期"/>
+				</div>
+			</div>
+			
+			<!--identity 如果有值则 校验输入值是否符合身份证格式   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">identity</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="identity" 
+						xui-verify="identity" 
+						xui-bubble="identity" 
+						placeholder="可输入身份证号"/>
+				</div>
+			</div>
+			
+			<!--number 如果有值则 校验输入值是否符合数字格式   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">number</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="number" 
+						xui-verify="number" 
+						xui-bubble="number" 
+						placeholder="可输入任意数字"/>
+				</div>
+			</div>
+			
+			<!--byte 如果有值则 校验输入值字符长度是否符合某个范围 需要手动传参   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">byte</label>
+				<div class="layui-input-inline">
+					<!--byte可传入1~2个数字 如果是一个参数 则校验字节小于这个范围  如果是2个参数则校验字节是否介于两个参数之间-->
+					<input type="text" 
+						class="layui-input" 
+						name="byte" 
+						xui-verify="byte(30)" 
+						xui-bubble="byte" 
+						placeholder="可输入30个字节"/>
+				</div>
+			</div>
+			
+			<!--min 如果有值则 校验输入值必须是数字且大于传入参数   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">min</label>
+				<div class="layui-input-inline">
+					<!--min可传入1个数字 校验值 是否大于传入参数-->
+					<input type="text" 
+						class="layui-input" 
+						name="min" 
+						xui-verify="min(30)" 
+						xui-bubble="min" 
+						placeholder="可输入大于30的数字"/>
+				</div>
+			</div>
+			
+			<!--max 同上--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">max</label>
+				<div class="layui-input-inline">
+					<!--max可传入1个数字 校验值 是否小于传入参数-->
+					<input type="text" 
+						class="layui-input" 
+						name="max" 
+						xui-verify="max(30)" 
+						xui-bubble="max" 
+						placeholder="可输入小于30的数字"/>
+				</div>
+			</div>
+			
+			<!--float 如果有值则 校验输入值必须是数字且小数位长度小于传入参数   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">float</label>
+				<div class="layui-input-inline">
+					<!--float可传入1个数字 校验值 是否是小数点后几位长度小于传入参数-->
+					<input type="text" 
+						class="layui-input" 
+						name="float" 
+						xui-verify="float(2)" 
+						xui-bubble="float" 
+						placeholder="可输入2位小数"/>
+				</div>
+			</div>
+			
+			<!--int 如果有值则 校验输入值必须是数字且是小于传入参数位数的整数   也可以是空值 不填写--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">int</label>
+				<div class="layui-input-inline">
+					<!--int可传入1个数字 校验值 是否是小于传入参数位数的整数-->
+					<input type="text" 
+						class="layui-input" 
+						name="int" 
+						xui-verify="int(8)" 
+						xui-bubble="int" 
+						placeholder="可输入8位以内整数"/>
+				</div>
+			</div>
+			
+			<!--自定义校验 需要自己手动配置校验函数--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">自定义校验</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="int" 
+						xui-verify="defined(呵呵呵呵)" 
+						xui-bubble="defined" 
+						placeholder="自定义校验 必须输入'自定义'三个字"/>
+				</div>
+			</div>
+			
+			<!--复合校验  可以zai xui-verify 里写多个校验函数 用 | 分割--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">复合校验</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="fuhe" 
+						xui-verify="required | min(8) | max(10)" 
+						xui-bubble="fuhe" 
+						placeholder="必填且不小于8不大于10的数字"/>
+				</div>
+			</div>
+
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button onclick="Xui.verify()" type="button" class="layui-btn layui-btn-normal">提交</button>
+				</div>
+			</div>
+		</form>
+		<script type="text/javascript">
+			var xui = new Xui({
+				el: "form",
+				verifier: {
+					//定义自定义校验函数
+					defined: function (val, ele, args) {
+						//在这里能够拿到三个参数，val为当前校验的元素的value 属性
+						//ele 为当前校验元素本身
+						//args 为 在 元素的xui-verify 属性使用该校验函数时传入的参数
+						console.log(args);
+						
+						//如果自定义校验函数返回了 string类型 则校验元素会视为报错 否则任何类型或不返回都视为校验成功
+						if(val != "自定义") return "这个校验不通过"; 
+					}
+				}
+			});
+		</script>
+	</body>
+</html>

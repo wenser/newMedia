@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="chrome">
+    <title>创建订单</title>
+    <!--layui的样式-->
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+		<div class="layui-header">
+			<div class="top-cont">
+				<div class="layui-logo"></div>
+				<!--个人头像-->
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="images/user_03.png" class="layui-nav-img"> fuben
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--左导航-->
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="icon"></i>订单管理</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;">客户订单</a>
+							</dd>
+							<dd class="layui-this">
+								<a href="javascript:;">广告位订单</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">草稿箱</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">合同管理</a>
+							</dd>
+							<dd>
+								<a href="table.html">表格页面</a>
+							</dd>
+						</dl>
+					</li>	
+				</ul>
+			</div>
+		</div>
+		<!--内容区域-->
+		<div class="layui-body" >
+
+			<div class="timeLinePart">
+				<ul>
+					<li class="active">填写订单基本信息</li>
+					<li>选择媒体账号</li>
+					<li>确认并提交订单</li>
+				</ul>
+
+				<div class="mainPart">
+					<div class="active">
+						第一部分
+					</div>
+					<div class="">
+						第二部分
+					</div>
+					<div class="">
+						第三部分
+					</div>
+				</div>
+
+				<!--按钮盒子-->
+				<div class="btnBox">
+					<button class="layui-btn prevStep layui-btn-disabled"><i class="layui-icon">&#xe603;</i> 上一步</button>
+					<button class="layui-btn nextStep">下一步 <i class="layui-icon">&#xe602;</i></button>
+				</div>
+			</div>
+		</div>
+		<div class="layui-footer">
+			<!-- 底部固定区域 -->
+		</div>
+	</div>
+	<!-- //引入layui -->
+	<script src="./plugins/layui/layui.js"></script>
+	<!--引入jQuery-->
+	<script src="plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--本页面js-->
+	<script src="js/createOrder.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

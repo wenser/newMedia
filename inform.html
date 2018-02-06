@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="chrome">
+    <title>详情页</title>
+    <!--layui的样式-->
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+		<div class="layui-header">
+			<div class="top-cont">
+				<div class="layui-logo"></div>
+				<!--个人头像-->
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="images/user_03.png" class="layui-nav-img"> fuben
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--左导航-->
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree" lay-filter="test">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="icon"></i>订单管理</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;">客户订单</a>
+							</dd>
+							<dd class="layui-this">
+								<a href="javascript:;">广告位订单</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">草稿箱</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">合同管理</a>
+							</dd>
+							<dd>
+								<a href="form.html">表单页</a>
+							</dd>
+						</dl>
+					</li>	
+				</ul>
+			</div>
+		</div>
+		<!--内容区域-->
+		<div class="layui-body" >
+			<!--边距为20px的最外层盒子-->
+			<div class="content">
+				<form class="layui-form" action="">
+					<!--卡片-->
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>基本信息</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--一行-->
+							<div class="layui-row">
+								<!--一行两列-->
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label"><sup>*</sup>长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="hehe1" xui-bubble="hehe1" xui-verify="required" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name2" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="layui-row">
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="第三方的施工的双方各双方都广东佛山告诉对方给对方告诉对方国防生的告诉对方广东佛山告诉对方给第三方割发代首给第三方">第三方的施工的双方各双方都广东佛山告诉对方给对方告诉对方国防生的告诉对方广东佛山告诉对方给第三方割发代首给第三方 </span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="123456789123456">123456789123456</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="layui-row">
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label">短输入：</label>
+										<div class="layui-input-inline">
+											<input type="text" name="name2" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					
+					<!--卡片-->
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>基本信息</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--一行-->
+							<div class="layui-row">
+								<div class="layui-form-item">
+									<label class="layui-form-label"><sup>*</sup>多文本输入：</label>
+									<div class="layui-input-block">
+										<textarea placeholder="sadfasddsfsdf" class="layui-textarea"></textarea>
+									</div>
+								</div>
+							</div>
+							
+							<div class="layui-row">
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label"><sup>*</sup>多文本输入：</label>
+										<div class="layui-input-block">
+											<textarea placeholder="dfdf" class="layui-textarea"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label"><sup>*</sup>多文本输入：</label>
+										<div class="layui-input-block">
+											<input type="text" class="layui-input" />
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="layui-row">
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label"><sup>*</sup>多文本输入：</label>
+										<div class="layui-input-block">
+											<textarea  class="layui-textarea"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm6 layui-col-xs6">
+									<div class="layui-form-item">
+										<label class="layui-form-label"><sup>*</sup>多文本输入：</label>
+										<div class="layui-input-block">
+											<input type="text" class="layui-input" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--卡片-->
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>基本信息</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--一行-->
+							<div class="layui-row">
+								<!--一行三列-->
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name1" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name1" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name2" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="layui-row">
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="layui-row">
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<!--卡片-->
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>基本信息</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--一行-->
+							<div class="layui-row">
+								<!--一行四列-->
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name1" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name1" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name1" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">长输入：</label>
+										<div class="layui-input-block">
+											<input type="text" name="name2" placeholder="请输入姓名" class="layui-input">
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="layui-row">
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="123456789123456">123456789123456</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="123456789123456">123456789123456</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="layui-row">
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm3 layui-col-xs3">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>form布局</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--一行-->
+							<div class="layui-row">
+								
+								<div class="layui-form-item">
+									<label class="layui-form-label">自定义校验：</label>
+									<div class="layui-input-block" xui-bubble="fanwei">
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验数字" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+										<span class="card-inline">固定数值：</span>
+										<span class="card-inline">这个值这个值这个值</span>
+									</div>
+								</div>
+								
+							</div>
+							
+							<!--复选行-->
+							<div class="layui-row">
+								<div class="layui-form-item">
+									<label class="layui-form-label">自定义校验：</label>
+									<div class="layui-input-block">
+										<input class="red-checkbox" type="checkbox" title="阅读" lay-skin="primary" />
+										<input class="blue-checkbox" type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" checked/>
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+										<input type="checkbox" title="阅读" lay-skin="primary" />
+									</div>
+								</div>
+							</div>
+							
+							<!--一行-->
+							<div class="layui-row">
+								
+								<div class="layui-form-item">
+									<label class="layui-form-label">自定义校验：</label>
+									<div class="layui-input-block" xui-bubble="fanwei">
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验数字" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+									</div>
+								</div>
+								<div class="layui-form-item">
+									<div class="layui-input-block" xui-bubble="fanwei">
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验数字" class="layui-input">
+										</div>
+										<span class="card-inline">呵呵呵：</span>
+										<div class="layui-input-inline _100">
+											<input type="text" name="fanwei" xui-verify="defined" placeholder="校验手机" class="layui-input">
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>固定头 固定列</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--给layui-row 元素加 class has_label-->
+							<div class="layui-row has_label">
+								<!--第一个元素放这个 就是-->
+								<label>放下五个字：</label>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">自适应输入框：</label>
+										<!--layui-input-block元素 添加maxW class  限制最大长度
+											给layui-input的父元素添加属性 data-unit 输入框后面就会添加单位
+										--> 
+										<div class="layui-input-block maxW unit">
+											<input type="text" class="layui-input"/>
+											<span>元</span>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">自适应输入框：</label>
+										<!--layui-input-block元素 添加maxW class  限制最大长度
+											给layui-input的父元素添加属性 data-unit 输入框后面就会添加单位
+										--> 
+										<div class="layui-input-block maxW"  data-unit="美元">
+											<input type="text" class="layui-input"/>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+								<div class="layui-col-sm4 layui-col-xs4">
+									<div class="layui-form-item">
+										<label class="layui-form-label">不可输入：</label>
+										<div class="layui-input-block">
+											<span class="more-txt" data-title="sfdasdfsadfsadfasdfasdfdsaf">sfdasdfsadfsadfasdfasdfdsaf</span><em>详细</em>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>两行</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<div class="layui-row">
+								<span class="card-inline">标题：</span>
+							</div>
+							<div class="layui-row">
+								<span class="card-inline">内容大师傅上的来见风使舵佛撒的佛寺的安抚萨顶顶搜方式奥大佛阿萨德：</span>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>form布局</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--日历盒子-->
+							<div class="calender_box">
+								<!--标题-->
+								<div class="calender_title">
+									<h6>
+										<em></em>年
+										<em></em>月
+										<!--//日历图标-->
+										<span class="dateBtn">
+											<i class="layui-icon date">&#xe63c;</i>
+											<!--触发日历的输入框-->
+											<input id="dateInput" type="text" readonly="readonly"/>
+										</span>
+									</h6>
+								</div>
+								<ul class="calender">
+								<!--周-->
+									<li>日</li>
+									<li>一</li>
+									<li>二</th>
+									<li>三</th>
+									<li>四</th>
+									<li>五</th>
+									<li>六</th>
+								</ul>
+								<!--天-->
+								<ul class="list_day clearfix">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li>
+										<div class="big_day active">1</div>
+										<div class="iconbox">
+											<i class="layui-icon">&#xe618;</i>
+										</div>
+									</li>
+									<li class="active">
+										<div class="big_day">1</div>
+										<div class="iconbox">
+											<i class="layui-icon">&#xe618;</i>
+										</div>
+									</li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--卡片-->
+					<div class="card">
+						<!--卡头-->
+						<div class="card-title">
+							<b>表格</b>
+						</div>
+						<!--卡体-->
+						<div class="card-body">
+							<!--盒子元素  带阴影的-->
+							<div class="shadow_box">
+								
+								<!--class float_bg 是悬浮背景  不要的话去掉-->
+								<!--small_padding class 让table里的 padding更紧凑-->
+								<table class="layui-table float_bg small_padding">
+									<thead>
+										<tr>
+											<th>dsfuhasdghfisdg</th>
+											<th>dsfuhasdghfisdg</th>
+											<th>dsfuhasdghfisdg</th>
+											<th>dsfuhasdghfisdg</th>
+											<th>dsfuhasdghfisdg</th>
+											<th>dsfuhasdghfisdg</th>
+											<th>dsfuhasdghfisdg</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+										</tr>
+										<tr>
+											<td>dsfsdfd</td>
+											<td>
+												<input type="text" class="layui-input center" />
+											</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+										</tr>
+										<tr>
+											<td>dsfsdfd</td>
+											<td>
+												<input type="text" class="layui-input" />
+											</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+										</tr>
+										<tr>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>dsfsdfd</td>
+											<td>
+												<div class="layui-table-cell laytable-cell-1-10">
+													<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+													<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+													<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<!--按钮盒子-->
+					<div class="btn-box">
+						<button type="button" class="layui-btn layui-btn-primary">返回</button>
+						<button type="button" id="reject" class="layui-btn layui-btn-danger">拒绝</button>
+						<button type="submit" xui-submit class="layui-btn layui-btn-normal">修改</button>
+						<div class="layui-form-mid">待审失败客户信息只有销售具有【修改】权限</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="layui-footer">
+			<!-- 底部固定区域 -->
+		</div>
+	</div>
+
+	<!-- //引入layui -->
+	<script src="plugins/layui/layui.js"></script>
+	<!--引入jQuery-->
+	<script src="plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--本页js-->
+	<script src="js/inform.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

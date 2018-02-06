@@ -1,0 +1,208 @@
+body,
+html {
+    font-family: "微软雅黑";
+    font-size: 14px;
+    color: #5e5c71;
+    background: url(../images/loginInBackground.png) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+.container * {
+    box-sizing: border-box;
+}
+
+/*//登录盒子*/
+.login_box {
+    width: 430px;
+    position: absolute;
+    left: 50%;
+    margin-left: -235px;
+    top: 20%;
+}
+
+.login_title {
+    overflow: hidden;
+    margin-bottom: 35px;
+}
+
+.login_logo {
+    background: url(../images/login_logo.png);
+    width: 259px;
+    height: 70px;
+    /*margin-left: 10px;*/
+    margin:  0 auto;
+}
+
+.login_font {
+    float: left;
+    font-size: 29px;
+    color: #fff;
+    line-height: 70px;
+    margin-left: 30px;
+}
+
+.login_form {
+    /*background: rgba(48,50,74,0.5);*/
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #5e5a6e;
+    border-radius:  4px;
+    padding: 30px;
+    padding-top: 45px;
+    position: relative;
+}
+.login_form:after {
+    position:absolute;
+    content: "";
+    border: 18px solid transparent;
+    border-bottom-color: #5e5a6e;
+    left: 50%;
+    margin-left: -9px;
+    top: -37px;
+    transform: scaleX(.6);
+}
+.login_form:before {
+    position:absolute;
+    content: "";
+    border: 18px solid transparent;
+    border-bottom-color:  rgb(42,47,50);
+    left: 50%;
+    margin-left: -9px;
+    top: -35px;
+    transform: scaleX(.6);
+    z-index: 1;
+}
+.login_form form{
+    width: 310px;
+    margin: 0 auto;
+}
+
+/*//表单行*/
+.form_row {
+    height: 48px;
+    line-height: 48px;
+    background: #fff;
+    border-radius: 3px;
+    margin-bottom: 22px;
+    position: relative;
+}
+.form_row input {
+    outline: none;
+    padding: 12px 17px;
+    padding-left: 48px;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    color: inherit;
+}
+.form_row input::-webkit-input-placeholder {
+    color: inherit;
+}
+/*图标*/
+.form_row .icon {
+    position: absolute;
+    left: 17px;
+    top: 14px;
+    width: 16px;
+    height: 19px;
+}
+.form_row .icon.user {
+    background: url(../images/userIcon.png);
+}
+.form_row .icon.pword {
+    background: url(../images/passwordIcon.png);
+}
+/*//验证码行*/
+.form_row.check_num {
+    width: 43%;
+}
+.form_row.check_num input{
+    padding-left: 17px;
+}
+/*//验证码生成区*/
+.num_box {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin-left: 10px;
+    min-width: 116px;
+}
+
+/*//忘记密码行*/
+.form_handle {
+    margin-top: 15px;
+    margin-bottom: 22px;
+    overflow: hidden;
+    color: #fff;
+}
+.form_handle >div{
+    float: left;
+}
+.form_handle >.right{
+    float: right;
+}
+.form_handle a{
+    color: #35a9ff;
+}
+/*复选框*/
+.form_handle >div label {
+    cursor: pointer;
+}
+.form_checkbox {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #acaab4;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: -1px;
+    margin-right: 7px;
+}
+.form_checkbox input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1;
+}
+.form_checkbox input:checked + .icon {
+    background: url(../images/right.png);
+    width: 10px;
+    height: 8px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+/*//登录按钮*/
+.form_btn {
+    height: 50px;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    width: 100%;
+    background: #35a9ff;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 52px;
+    display: block;
+}
+.form_btn:hover {
+    background: #52b5fe;
+}
+

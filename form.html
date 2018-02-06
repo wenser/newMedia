@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="chrome">
+    <title>新建媒体</title>
+    <!--layui的样式-->
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+		<div class="layui-header">
+			<div class="top-cont">
+				<div class="layui-logo"></div>
+				<!--个人头像-->
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="images/user_03.png" class="layui-nav-img"> fuben
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--左导航-->
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="icon"></i>订单管理</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;">客户订单</a>
+							</dd>
+							<dd class="layui-this">
+								<a href="javascript:;">广告位订单</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">草稿箱</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">合同管理</a>
+							</dd>
+							<dd>
+								<a href="table.html">表格页面</a>
+							</dd>
+						</dl>
+					</li>	
+				</ul>
+			</div>
+		</div>
+		<!--内容区域-->
+		<div class="layui-body" >
+			<div class="layui-body-main">
+				<!-- 表单盒子 -->
+				<div class="formBox">
+					<!--表单-->
+					<form class="layui-form" action="">
+						<fieldset class="layui-elem-field layui-field-title site-title">
+						  <legend><a name="quickstart">输入框部分</a></legend>
+						</fieldset>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>校验数字：</label>
+							<div class="layui-input-inline" >
+								<input type="text" value="456" name="test1" xui-bubble="test1" xui-verify="required | number" placeholder="此项校验数字" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>验证手机号：</label>
+							<div class="layui-input-inline">
+								<input type="text" value="18842032134" name="test2" xui-bubble="test2" xui-verify="phone" placeholder="此项校验手机号" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>验证邮箱：</label>
+							<div class="layui-input-inline">
+								<input type="text" value="55555@qqqqqq.5454544" name="test02" xui-bubble="test02" xui-verify="email" placeholder="此项校验邮箱" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>验证非空：</label>
+							<div class="layui-input-inline">
+								<input xui-ban type="text" name="test03" xui-bubble="test03" xui-verify="required" placeholder="此项校验非空" class="layui-input">
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-inline" xui-bubble="fanwei">
+								<label class="layui-form-label">自定义校验：</label>
+								<div class="layui-input-inline _100">
+									<input type="text" name="fanwei" xui-verify="required | number" placeholder="校验数字" class="layui-input">
+								</div>
+								<div class="layui-form-mid">-</div>
+								<div class="layui-input-inline _100">
+									<input type="text" name="fanwei" xui-verify="required | phone" placeholder="校验手机" class="layui-input">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">短输入：</label>
+							<div class="layui-input-inline">
+								<input type="text" name="name" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">长输入：</label>
+							<div class="layui-input-block">
+								<input type="text" name="name1" placeholder="请输入姓名" autocomplete="off" class="layui-input">
+							</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">不可用输入框：</label>
+							<div class="layui-input-block">
+								<input type="text" name="name2" value="不可用输入" placeholder="请输入姓名" autocomplete="off" class="layui-input layui-disabled" readonly>
+							</div>
+						</div>
+
+						<!--//同行-->
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">同行输入：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="name" placeholder="请输入姓名" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">同行输入：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="name" placeholder="请输入姓名" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">同行输入：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="name" placeholder="请输入姓名" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">同行输入：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="name" placeholder="请输入姓名" class="layui-input">
+								</div>
+							</div>
+							<div class="layui-inline">
+								<label class="layui-form-label">同行输入：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="name" placeholder="请输入姓名" class="layui-input">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item layui-form-text">
+							<label class="layui-form-label">文本域：</label>
+							<div class="layui-input-inline">
+								<textarea name="desc" placeholder="请输入内容" class="layui-textarea"></textarea>
+							</div>
+						</div>
+
+						<fieldset class="layui-elem-field layui-field-title site-title">
+						  <legend><a name="quickstart">单选框复选框部分</a></legend>
+						</fieldset>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>条件显示：</label>
+							<div class="layui-input-inline" xui-bubble="test3">
+								<input type="radio" name="test3" xui-verify="box" value="1" title="条件1" checked>
+								<input type="radio" name="test3" xui-verify="box" value="条件2" title="条件1">
+							</div>
+						</div>
+
+						<!--//根据上面的单选框值判断显示哪个-->
+						<div class="layui-form-item" xui-show="test3==1">
+							<label class="layui-form-label"></label>
+							<div class="layui-input-inline">
+								<input type="text" name="tiaojian1" xui-bubble="tiaojian1" xui-verify="number" class="layui-input" placeholder="输入条件1：必须数字"/>
+							</div>
+						</div>
+
+						<div class="layui-form-item" xui-show="test3 == 条件2">
+							<label class="layui-form-label"></label>
+							<div class="layui-input-inline">
+								<input type="text" name="tiaojian2" xui-bubble="tiaojian2" xui-verify="email" class="layui-input" placeholder="输入条件2：必须邮箱"/>
+							</div>
+						</div>
+
+						<!--等宽的容器-->
+						<div class="layui-form-item">
+							<label class="layui-form-label">复选等宽：</label>
+							<!--等宽的容器-->
+							<div class="layui-input-inline" xui-bubble="test4">
+								<input type="checkbox" name="test4" value="写作" title="写作" xui-verify="box" checked>
+								<input type="checkbox" name="test4" value="阅读" title="阅读" xui-verify="box" checked>
+								<input type="checkbox" name="test4" value="发呆" title="发呆" xui-verify="box" checked>
+								<input type="checkbox" name="test4" value="hehe" title="hehe" xui-verify="box" checked>
+							</div>
+						</div>
+
+						<div class="layui-form-item" xui-show="test4 == ['发呆','阅读','写作','hehe']">
+							<label class="layui-form-label"></label>
+							<div class="layui-input-inline">
+								<input type="text" value="此项只会在上面的复选都选中时显示" class="layui-input" />
+							</div>
+						</div>
+
+						<!--全宽的容器-->
+						<div class="layui-form-item">
+							<label class="layui-form-label">复选全宽：</label>
+							<!--全宽的容器-->
+							<div class="layui-input-block" >
+								<input type="checkbox" name="test5" value="胜多负少" title="胜多负少">
+								<input type="checkbox" name="test5" value="胜多啥地方负少" title="胜多啥地方负少" checked>
+								<input type="checkbox" name="test5" value="发呆" title="发呆">
+								<input type="checkbox" name="test5" title="发呆">
+								<input type="checkbox" name="test5" title="发呆">
+								<input type="checkbox" name="test5" title="发呆">
+								<input type="checkbox" name="test5" title="发呆">
+								<input type="checkbox" name="test5" title="发呆">
+							</div>
+						</div>
+
+						<!--等宽-->
+						<div class="layui-form-item">
+							<label class="layui-form-label">原始复选框：</label>
+							<div class="layui-input-inline">
+								<input type="checkbox" name="test6" lay-skin="primary" title="写作" checked>
+								<input type="checkbox" name="test6" lay-skin="primary" title="阅读">
+								<input type="checkbox" name="test6" lay-skin="primary" title="阅读">
+								<input type="checkbox" name="test6" lay-skin="primary" title="阅读">
+								<input type="checkbox" name="test6" lay-skin="primary" title="阅读">
+								<input type="checkbox" name="test6" lay-skin="primary" title="游戏" disabled>
+							</div>
+						</div>
+						<!--全宽-->
+						<div class="layui-form-item">
+							<label class="layui-form-label">容器全宽：</label>
+							<div class="layui-input-block">
+								<input type="checkbox" name="test7" lay-skin="primary" title="写作" checked>
+								<input type="checkbox" name="test7" lay-skin="primary" title="阅读">
+								<input type="checkbox" name="test7" lay-skin="primary" title="游戏" disabled>
+								<input type="checkbox" name="test7" lay-skin="primary" title="游戏" disabled>
+								<input type="checkbox" name="test7" lay-skin="primary" title="游戏" disabled>
+								<input type="checkbox" name="test7" lay-skin="primary" title="游戏" disabled>
+							</div>
+						</div>
+
+						<!--等宽-->
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>合作类别等：</label>
+							<div class="layui-input-inline">
+								<input type="radio" name="hz" value="独家包段" title="独家包段">
+								<input type="radio" name="hz" value="独家代理" title="独家代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+							</div>
+						</div>
+						<!--全宽-->
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>合作类别全：</label>
+							<div class="layui-input-block">
+								<input type="radio" name="hz" value="独家包段" title="独家包段">
+								<input type="radio" name="hz" value="独家代理" title="独家代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+								<input type="radio" name="hz" value="标准代理" title="标准代理">
+							</div>
+						</div>
+
+						<fieldset class="layui-elem-field layui-field-title site-title">
+						  <legend><a name="quickstart">文件上传</a></legend>
+						</fieldset>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>不自动上传：</label>
+							
+							<div class="layui-input-block">
+								
+								<!--单文件上传-->
+								<div class="layui-upload" xui-bubble="anewfile">
+									<!--触发按钮-->
+									<button type="button" class="layui-btn" id="test1">
+							          <i class="layui-icon">&#xe67c;</i>上传文件
+							        </button>
+							        <!--文件input-->
+							        <input type="file" name="anewfile" xui-verify="file"  />
+								</div>
+							</div>
+						</div>
+						
+						<div class="layui-form-item">
+							<label class="layui-form-label"><sup>*</sup>自动上传：</label>
+							
+							<div class="layui-input-block">
+								
+								<!--单文件上传-->
+								<div class="layui-upload">
+									<!--触发按钮-->
+									<button type="button" class="layui-btn" id="test2">
+							          <i class="layui-icon">&#xe601;</i>下载文件
+							        </button>
+							        <!--文件input-->
+							        <input type="file" name="autoupload" />
+								</div>
+							</div>
+						</div>
+
+						<fieldset class="layui-elem-field layui-field-title site-title">
+						  <legend><a name="quickstart">下拉框</a></legend>
+						</fieldset>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">单行选择框：</label>
+							<div class="layui-input-inline">
+								<select name="interest" xui-bubble="interest" xui-verify="required">
+									<option value=""></option>
+									<option value="0">写作</option>
+									<!--默认选中-->
+									<option value="1">阅读</option>
+									<option value="2">游戏</option>
+									<option value="3">音乐</option>
+									<option value="4">旅行</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">联动选择框：</label>
+							<div class="layui-input-inline ld">
+								<select name="quiz1" xui-verify="required"   xui-bubble="quiz1" >
+									<option value="">请选择省</option>
+									<option value="浙江" selected="">浙江省</option>
+									<option value="你的工号">江西省</option>
+									<option value="你最喜欢的老师">福建省</option>
+								</select>
+								<select name="quiz3" xui-verify="required" xui-bubble="quiz3" >
+									<option value="">请选择县/区</option>
+									<option value="西湖区">西湖区</option>
+									<option value="余杭区">余杭区</option>
+									<option value="拱墅区">临安市</option>
+								</select>
+								<select name="quiz2" xui-verify="required" xui-bubble="quiz2" >
+									<option value="">请选择市</option>
+									<option value="杭州">杭州</option>
+									<option value="宁波" disabled="">宁波</option>
+									<option value="温州">温州</option>
+									<option value="温州">台州</option>
+									<option value="温州">绍兴</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">搜索选择框：</label>
+							<div class="layui-input-inline">
+								<select name="modules" lay-search>
+									<option value="">直接选择或搜索选择</option>
+									<option value="1">layer</option>
+									<option value="2">form</option>
+									<option value="3">layim</option>
+									<option value="4">element</option>
+									<option value="5">laytpl</option>
+									<option value="6">upload</option>
+									<option value="7">laydate</option>
+									<option value="8">laypage</option>
+									<option value="9">flow</option>
+									<option value="10">util</option>
+									<option value="11">code</option>
+									<option value="12">tree</option>
+									<option value="13">layedit</option>
+									<option value="14">nav</option>
+									<option value="15">tab</option>
+									<option value="16">table</option>
+									<option value="17">select</option>
+									<option value="18">checkbox</option>
+									<option value="19">switch</option>
+									<option value="20">radio</option>
+								</select>
+							</div>
+						</div>
+
+						<fieldset class="layui-elem-field layui-field-title site-title">
+						  <legend><a name="quickstart">日期部分</a></legend>
+						</fieldset>
+
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">日期选择：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="tian" readonly xui-bubble="tian" xui-verify="required" class="layui-input layui-input-date" id="test4" placeholder="yyyy-MM-dd">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">时间选择器：</label>
+								<div class="layui-input-inline">
+									<input type="text" readonly class="layui-input layui-input-date" id="test5" placeholder="yy:mm:dd hh:mm:ss">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">日期范围：</label>
+								<div class="layui-input-inline">
+									<input type="text" name="he" readonly xui-bubble="he" xui-verify="required" class="layui-input layui-input-date" id="test6" placeholder="起始时间 - 结束时间">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">只选择时间：</label>
+								<div class="layui-input-inline">
+									<input type="text" readonly class="layui-input layui-input-date date-icon" id="test7" placeholder="HH:MM:SS">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-inline">
+								<label class="layui-form-label">时间范围：</label>
+								<div class="layui-input-inline">
+									<input type="text" readonly class="layui-input layui-input-date date-icon" id="test8" placeholder="HH:MM:SS - HH:MM:SS">
+								</div>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<label class="layui-form-label">dialog层：</label>
+							<div class="layui-input-block">
+								<!--点击调用方法-->
+								<button type="button" id="alert" class="layui-btn layui-btn-danger">警告框</button>
+								<button type="button" id="confirm" class="layui-btn layui-btn-warm">确认框</button>
+								<button type="button" id="defined" class="layui-btn">自定义内容</button>
+								<button type="button" class="layui-btn layui-btn-disabled">没啥用</button>
+								<button type="button" id="a" class="layui-btn">测试</button>
+							</div>
+						</div>
+
+						<div class="layui-form-item">
+							<div class="layui-input-block">
+								<a href=""  class="layui-btn layui-btn-primary">重置</a>
+								<button id="btn1" type="button" class="layui-btn layui-btn-normal">原生不校验提交</button>
+								<button id="btn2" type="button" class="layui-btn layui-btn-normal">原生校验提交</button>
+								<button id="btn3" type="button" class="layui-btn layui-btn-normal">无条件提交</button>
+								<button id="btn4" type="button" class="layui-btn layui-btn-normal">校验提交</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="layui-footer">
+			<!-- 底部固定区域 -->
+		</div>
+	</div>
+	<!--引入jQuery-->
+	<script src="plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- //引入layui -->
+	<script src="plugins/layui/layui.js"></script>
+	<!--引入xui-->
+	<script src="js/xui.js" type="text/javascript" charset="utf-8"></script>
+	<!--本页面js-->
+	<script src="js/form.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

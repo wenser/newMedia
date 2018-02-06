@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="chrome">
+    <title>表格页面</title>
+    <!--layui的样式-->
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css"/>
+</head>
+
+<body class="layui-layout-body">
+	<div class="layui-layout layui-layout-admin">
+		<!--头部-->
+		<div class="layui-header">
+			<div class="top-cont">
+				<div class="layui-logo"></div>
+				<!--个人头像-->
+				<ul class="layui-nav layui-layout-right">
+					<li class="layui-nav-item">
+						<a href="javascript:;">
+							<img src="images/user_03.png" class="layui-nav-img"> fuben
+						</a>
+					</li>
+					<li class="layui-nav-item">
+						<a href="">退出</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--左导航-->
+		<div class="layui-side layui-bg-black">
+			<div class="layui-side-scroll">
+				<!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+				<ul class="layui-nav layui-nav-tree" lay-filter="test">
+					<li class="layui-nav-item layui-nav-itemed">
+						<a href="javascript:;"><i class="icon"></i>订单管理</a>
+						<dl class="layui-nav-child">
+							<dd>
+								<a href="javascript:;">客户订单</a>
+							</dd>
+							<dd class="layui-this">
+								<a href="javascript:;">广告位订单</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">草稿箱</a>
+							</dd>
+							<dd>
+								<a href="javascript:;">合同管理</a>
+							</dd>
+							<dd>
+								<a href="form.html">表单页</a>
+							</dd>
+						</dl>
+					</li>	
+				</ul>
+			</div>
+		</div>
+		<!--内容区域-->
+		<div class="layui-body" >
+
+			<div class="layui-tab">
+				<button class="layui-btn newCreateOrder">
+					<i class="layui-icon">&#xe654;</i> 新建订单
+				</button>
+				<!--  一级tab项对应每块的内容  -->
+			  <ul class="layui-tab-title">
+			    <li>全部订单</li>
+			    <li>待审核订单</li>
+			    <li class="layui-this">已通过</li>
+			    <li>待执行</li>
+			    <li>执行中</li>
+			    <li>待最终确认</li>
+			    <li>成功订单</li>
+			    <li>订单失败</li>
+			  </ul>
+			  
+			  <!--content 带边距的盒子     noTB是去掉上下padding-->
+			  <div class="layui-tab-content content noTB">
+				  <!--一级Tab项对应每块的内容-->
+			    <div class="layui-tab-item">内容1</div>
+			    <div class="layui-tab-item">内容2</div>
+			    <div class="layui-tab-item layui-show">
+					<div class="layui-tab secondLevelTab">
+						<!--  二级tab项  -->
+						<ul class="layui-tab-title">
+							<li>客户订单未完成 <span>10</span></li>
+							<i class="verticalLine"></i>
+							<li class="layui-this">待销售确认 <span>13</span></li>
+							<i class="verticalLine"></i>
+							<li>待媒介确认 <span>10</span></li>
+							<i class="verticalLine"></i>
+							<li>待商务确认 <span>10</span></li>
+						</ul>
+						<div class="layui-tab-content">
+							<div class="layui-tab-item mainContainer">内容1</div>
+							<div class="layui-tab-item mainContainer layui-show">
+								<!--输入框组部分-->
+								<form class="layui-form" action="" >
+									<!--订单编号名称-->
+									<div class="layui-input-inline">
+										<input id="demoReload" name="he" xui-verify="required" type="text" name="id"  autocomplete="off" placeholder="订单编号/订单名称" class="layui-input input-lg">
+									</div>
+									<!--执行日期-->
+									<div class="layui-input-inline">
+										<input type="text" name="title"  autocomplete="off" placeholder="执行日期" class="layui-input input-lg">
+									</div>
+									<!--媒体名称-->
+									<div class="layui-input-inline">
+										<input type="text" name="title"  autocomplete="off" placeholder="媒体名称" class="layui-input input-lg">
+									</div>
+									<!--媒体名称-->
+									<div class="layui-input-inline">
+										<input type="text" name="title"  autocomplete="off" placeholder="媒体名称" class="layui-input input-md">
+									</div>
+									<!--下拉框-->
+									<div class="layui-input-inline input-xs">
+										<select class="" name="interest" lay-filter="aihao">
+											<option value="">新媒体</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+									<div class="layui-input-inline input-xs">
+										<select class="" name="interest" lay-filter="aihao">
+											<option value="">合作方式</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+									<div class="layui-input-inline input-sm">
+										<select name="interest" lay-filter="aihao">
+											<option value="">售卖方式</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+									<div class="layui-input-inline input-xs">
+										<select name="interest" lay-filter="aihao">
+											<option value="">行业部门</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+									<div class="layui-input-inline input-xs">
+										<select name="interest" lay-filter="aihao">
+											<option value="">行业区域</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+									<div class="layui-input-inline input-xs">
+										<select name="interest" lay-filter="aihao">
+											<option value="">销售小组</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+									<div class="layui-input-inline input-xs">
+										<select name="interest" lay-filter="aihao">
+											<option value="">媒介人员</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+									<div class="layui-input-inline input-xs">
+										<select name="interest" lay-filter="aihao" lay-search="">
+											<option value="">售卖方式</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+
+									<div class="layui-inline ">
+										<div class="layui-input-inline input-lg-plus">
+											<input type="text"  readonly  name="he"  xui-verify="required" class="layui-input layui-input-date" id="dateSelect" placeholder="起始时间 - 结束时间">
+										</div>
+									</div>
+
+									<div class="layui-input-inline input-xs">
+										<select name="interest" lay-filter="aihao" lay-search="">
+											<option value="">直接选择或搜索选择</option>
+											<option value="0">写作</option>
+											<option value="1">阅读</option>
+											<option value="2">游戏</option>
+											<option value="3">音乐</option>
+											<option value="4">旅行</option>
+										</select>
+									</div>
+
+									<button type="button" data-type="reload" class="layui-btn layui-btn-normal searchBtn">
+										<i class="layui-icon">&#xe615;</i>
+										搜索
+									</button>
+
+									<button type="reset" class="layui-btn layui-btn-warm resetBtn">
+										<i class="layui-icon">&#x1002;</i>
+										重置
+									</button>
+
+									<!--订单提示信息部分-->
+									<p class="orderInfo">
+										<span>
+											订单总金额:
+											<strong>20652233</strong>
+											元
+										</span>
+										<span>
+											订单数量:
+											<strong>200</strong>
+											个
+										</span>
+									</p>
+
+									<!--表格数据信息-->
+									<div class="tableData">
+										<table id="test" lay-skin="line" class="list-table layui-table" lay-filter="demo">
+											<!--控制每一列的宽度-->
+											<colgroup>
+												<col width="100">
+												<col width="200">
+												<col width="200">
+												<col width="100">
+												<col width="400">
+											</colgroup>
+											<thead>
+												<tr>
+													<th style="width: 1px"><input type="checkbox" name="" lay-skin="primary" lay-filter="allChoose"></th>
+													<th>序号 <img src="images/gray.png"/></th>
+													<th>名称</th>
+													<th>媒体</th>
+													<th class="centerAlign">操作</th>
+												</tr>
+											</thead>
+											<tbody></tbody>
+										</table>
+									</div>
+
+									<!--分页模板-->
+									<div id="page" class="page"></div>
+								</form>
+							</div>
+							<div class="layui-tab-item mainContainer">
+								内容3
+							</div>
+							<div class="layui-tab-item mainContainer">内容4</div>
+						</div>
+					</div>
+				</div>
+			    <div class="layui-tab-item">内容4</div>
+			    <div class="layui-tab-item">内容5</div>
+			    <div class="layui-tab-item">内容6</div>
+			    <div class="layui-tab-item">内容7</div>
+			    <div class="layui-tab-item">内容8</div>
+			  </div>
+			</div>
+
+			<!--调用加载动画按钮-->
+			<div>
+				<button id="openLoadBtn">打开loading</button>
+			</div>
+		</div>
+
+		<div class="layui-footer">
+			<!-- 底部固定区域 -->
+		</div>
+	</div>
+
+	<!-- //引入layui -->
+	<script src="plugins/layui/layui.js"></script>
+	<!--引入jQuery-->
+	<script src="plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--table页面js-->
+	<script src="js/table.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
