@@ -455,11 +455,10 @@ html {
     background: lightcoral;
     color: #fff !important;
     border-radius: 5px;
-    position: absolute;
+    position: fixed;
     z-index: 19891013;
     animation: goTop .2s linear;
     -webkit-animation: goTop .2s linear;
-    display: none !important;
 }
 
 .layui-body .xui-bubble:after {
@@ -477,7 +476,7 @@ html {
 
 /*加方位后才显示*/
 .layui-body .xui-bubble.xui-t,.layui-body .xui-bubble.xui-r,.layui-body .xui-bubble.xui-b,.layui-body .xui-bubble.xui-l,.layui-body .xui-bubble.xui-tr,.layui-body .xui-bubble.xui-tl,.layui-body .xui-bubble.xui-br,.layui-body .xui-bubble.xui-bl,.layui-body .xui-bubble.xui-rt,.layui-body .xui-bubble.xui-rb,.layui-body .xui-bubble.xui-lt,.layui-body .xui-bubble.xui-lb {
-    display: block !important;
+    position: absolute;
 }
 
 .layui-body .xui-bubble.xui-t:after {
