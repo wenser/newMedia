@@ -13,7 +13,7 @@
 		<h1>有时候你可能在切换tab时把某些元素给隐藏了，然后你只想校验某部分元素，<br />
 		但是隐藏的元素在执行xui.verify()方法校验的时候，仍然会被校验一遍，<br />
 		这时候就需要给隐藏的元素加一个指令xui-ban</h1>
-		<h1 color="red">xui-ban指令能够让被挂载的元素和该元素内所有的元素都逃过xui-verify的校验</h1>
+		<h1 color="red">xui-ban指令能够让被挂载的元素都逃过xui-verify的校验</h1>
 		<h1 style="color:red">也就是说如果你给某一个元素添加了xui-ban属性，那么这个元素上的所有校验指令全部失效</h1>
 		<h1 style="color:green">r如果你想动态的禁止或者解除禁止某一个元素，你也可以用js来 “ban(禁)掉/重启” 元素的校验功能</h1>
 		<form action="" class="layui-form">

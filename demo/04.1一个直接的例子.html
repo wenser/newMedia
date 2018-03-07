@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../plugins/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<script src="../plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/xui.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.hide {
+				display: none;
+			}
+		</style>
+	</head>
+	<body class="layui-body">
+		<form action="" class="layui-form">
+			
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">套餐：</label>
+				<div class="layui-input-inline" xui-bubble="taocan">
+					套餐1<input style="display: inline !important;width: auto;height: auto;-webkit-appearance:radio "
+						name="taocan" 
+						type="radio"
+						xui-verify="box" 
+						value="1"
+						/>
+					套餐2<input style="display: inline !important;width: auto;height: auto;-webkit-appearance:radio "
+						name="taocan" 
+						type="radio"
+						xui-verify="box" 
+						value="2"
+						/>
+				</div>
+			</div>
+			
+			<!--required 校验非空、非空格--> 
+			<div class="layui-form-item hide taocan" >
+				<label for="" class="layui-form-label">套餐一必填</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="required1" 
+						xui-verify="required" 
+						xui-bubble="required1" 
+						placeholder="套餐一必填"/>
+				</div>
+			</div>
+			<div class="layui-form-item hide taocan">
+				<label for="" class="layui-form-label">套餐二必填</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="required2" 
+						xui-verify="required" 
+						xui-bubble="required2" 
+						placeholder="套餐二必填"/>
+				</div>
+			</div>
+			<button class="layui-btn" >提交</button>
+		</form>
+		<script type="text/javascript">
+			var xui = new Xui({
+				el: "form",
+			});
+			
+			$("button").eq(0).click(function (e) {
+				//拦截并校验
+				if(!xui.verify()) {
+					e.preventDefault();
+				}
+			});
+			
+			$("input[type=radio]").click(function (e) {
+				console.log($(this).val());
+				if (this.value == 1) {
+					//解除禁用对应的input
+					$(".taocan").eq(0).removeClass("hide");
+					xui.banEle($(".taocan").eq(0).find("input"), true) //解除
+					//禁用隐藏的元素
+					$(".taocan").eq(1).addClass("hide");
+					xui.banEle($(".taocan").eq(1).find("input")) //禁止
+				}else {
+					
+					$(".taocan").eq(1).removeClass("hide");
+					xui.banEle($(".taocan").eq(1).find("input"), true) //解除
+					
+					$(".taocan").eq(0).addClass("hide");
+					xui.banEle($(".taocan").eq(0).find("input")) //禁止
+				}
+			}); 
+			//
+		</script>
+	</body>
+</html>
