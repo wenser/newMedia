@@ -1885,3 +1885,10 @@ td{
 	line-height: 30px;
 	vertical-align: middle;
 }
+/**表格无数据默认项**/
+.defaultData{
+	text-align: center;
+    margin: 20px;
+    font-size: 16px;
+    color: #ccc;
+}
