@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../plugins/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<script src="../plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/xui.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="layui-body">
+		<h1>有时候你可能在切换tab时把某些元素给隐藏了，然后你只想校验某部分元素，<br />
+		但是隐藏的元素在执行xui.verify()方法校验的时候，仍然会被校验一遍，<br />
+		这时候就需要给隐藏的元素加一个指令xui-ban</h1>
+		<h1 color="red">xui-ban指令能够让被挂载的元素和该元素内所有的元素都逃过xui-verify的校验</h1>
+		<h1 style="color:red">也就是说如果你给某一个元素添加了xui-ban属性，那么这个元素上的所有校验指令全部失效</h1>
+		<h1 style="color:green">r如果你想动态的禁止或者解除禁止某一个元素，你也可以用js来 “ban(禁)掉/重启” 元素的校验功能</h1>
+		<form action="" class="layui-form">
+			<!--required 校验非空、非空格--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">required</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="required1" 
+						xui-verify="required" 
+						xui-bubble="required1" 
+						placeholder="必填项"/>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">被ban的元素</label>
+				<div class="layui-input-inline">
+					<input type="text"  xui-ban
+						class="layui-input" 
+						name="required" 
+						xui-verify="required" 
+						xui-bubble="required" 
+						placeholder="必填项"/>
+				</div>
+			</div>
+			<button class="layui-btn" >提交</button>
+			<button class="layui-btn" type="button" id="ban"> 恢复或者禁止第二个input的校验功能</button>
+			<h3>xui.banEle(ele, flag) 方法用来禁止或解除某个元素的校验功能 ，<br />
+			第一个参数为元素obj，第二个参数如果为true则解除禁用,如果不为true 则禁用</h3>
+		</form>
+		<script type="text/javascript">
+			var xui = new Xui({
+				el: "form",
+			});
+			
+			$("button").eq(0).click(function (e) {
+				//拦截并校验
+				if(!xui.verify()) {
+					e.preventDefault();
+				}
+			});
+			//恢复或者禁止第二个input的校验功能
+			$("#ban").click(function () {
+				if($("input").eq(1).attr("xui-ban") == undefined) {
+					xui.banEle($("input").eq(1));
+					alert("禁用成功")
+				}
+				else {
+					xui.banEle($("input").eq(1), true);
+					alert("解除禁用成功")
+				}
+			});
+		</script>
+	</body>
+</html>

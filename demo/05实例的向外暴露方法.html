@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../plugins/layui/css/layui.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<script src="../plugins/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../plugins/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/xui.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="layui-body">
+		<h1>下面的button点击后会执行一些xui的实例方法，都对开发很有用</h1>
+		<form action="" class="layui-form">
+			<!--required 校验非空、非空格--> 
+			<div class="layui-form-item">
+				<label for="" class="layui-form-label">required</label>
+				<div class="layui-input-inline">
+					<input type="text" 
+						class="layui-input" 
+						name="required" 
+						xui-verify="required" 
+						xui-bubble="required" 
+						placeholder="必填项"/>
+				</div>
+			</div>
+			<button class="layui-btn" >提交</button>
+			<br />
+			<br />
+			<button class="layui-btn" type="button" id="ver">xui.verify(elem) 校验所有或指定元素是否合法 <br />
+			<br />
+			<button class="layui-btn" type="button" id="get">xui.getJSON() 获取当前实例对应表单的JSON对象<br />
+			<br />
+			<button class="layui-btn" type="button" id="adjust">xui.adjust() 有时候拉动浏览器报错气泡位置会跑偏，执行该方法矫正跑偏的气泡<br />
+			返回true通过，返回false不通过</button>
+			<br /><br />
+			<button class="layui-btn" type="button" >xui.banEle(elem) 详见demo04<br />
+		</form>
+		<script type="text/javascript">
+			var xui = new Xui({
+				el: "form",
+			});
+			$("#ver").click(function  () {
+				xui.verify($("input"));
+			});
+			$("#get").click(function  () {
+				alert(JSON.stringify(xui.getJSON()))
+			});
+			$("#adjust").click(function  () {
+				xui.adjust();
+			});
+		</script>
+	</body>
+</html>

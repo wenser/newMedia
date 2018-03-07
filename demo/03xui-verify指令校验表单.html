@@ -178,7 +178,7 @@
 				<div class="layui-input-inline">
 					<input type="text" 
 						class="layui-input" 
-						name="int" 
+						name="defined" 
 						xui-verify="defined(呵呵呵呵)" 
 						xui-bubble="defined" 
 						placeholder="自定义校验 必须输入'自定义'三个字"/>
@@ -207,6 +207,7 @@
 		<script type="text/javascript">
 			var xui = new Xui({
 				el: "form",
+				//verifier 属性代表初始化定义的校验函数，可以在xui-verify指令中使用下面定义的自定义校验
 				verifier: {
 					//定义自定义校验函数
 					defined: function (val, ele, args) {
