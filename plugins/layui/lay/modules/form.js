@@ -310,7 +310,7 @@ layui.define('layer', function(exports){
               ,reElem.addClass(RE_CLASS[1]).find('em').text(text[0])
             );
             
-            if(check[0].form.instance) {
+            if(check[0].form && check[0].form.instance) {
             	check[0].form.instance.verify(check, true);
             }
             
@@ -370,7 +370,7 @@ layui.define('layer', function(exports){
             reElem.addClass(CLASS+'ed');
             reElem.find('.layui-icon').addClass(ANIM).html(ICON[0]);
             
-            if(radio[0].form.instance) {
+            if(radio[0].form && radio[0].form.instance) {
             	radio[0].form.instance.verify(radio, true);
             }
             layui.event.call(radio[0], MOD_NAME, 'radio('+ filter +')', {
